@@ -8,7 +8,9 @@
 
 import UIKit
 
-protocol QuizViewable: class {}
+protocol QuizViewable: class {
+    func updateView(_ viewModel: QuizViewModel)
+}
 
 final class QuizViewController: UIViewController {
 
@@ -24,21 +26,28 @@ final class QuizViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        interactor?.start()
     }
 
-    func updateView(_ viewModel: QuizViewModel) {
-        progressLabel.text = ""
-        targetLabel.text = ""
-        topLeftButton.titleLabel?.text = ""
-        topRightButton.titleLabel?.text = ""
-        bottomLeftButton.titleLabel?.text = ""
-        bottomRightButton.titleLabel?.text = ""
-    }
 
     func bind(to interactor: QuizInteractable?, and router: QuizRoutable) {
         self.interactor = interactor
         self.router = router
     }
+
+    @IBAction func buttonTapped() {
+        interactor?.answerSelected()
+    }
 }
 
-extension QuizViewController: QuizViewable {}
+extension QuizViewController: QuizViewable {
+
+    func updateView(_ viewModel: QuizViewModel) {
+        progressLabel.text = viewModel.progress
+        targetLabel.text = viewModel.target
+        topLeftButton.setTitle(viewModel.correctAnswer, for: .normal)
+        topRightButton.setTitle(viewModel.incorrectAnswers[0], for: .normal)
+        bottomLeftButton.setTitle(viewModel.incorrectAnswers[1], for: .normal)
+        bottomRightButton.setTitle(viewModel.incorrectAnswers[2], for: .normal)
+    }
+}

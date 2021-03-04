@@ -8,12 +8,17 @@
 
 import Foundation
 
-protocol QuizInteractable {}
+protocol QuizInteractable {
+    func start()
+    func answerSelected()
+}
 
 final class QuizInteractor {
 
     private let presenter: QuizPresentable
     private let worker: QuizWorkable
+    private var currentIndex: Int = 1
+    private var languagePairs: [LanguagePairable] = []
 
     init(presenter: QuizPresentable, worker: QuizWorkable) {
         self.presenter = presenter
@@ -21,4 +26,22 @@ final class QuizInteractor {
     }
 }
 
-extension QuizInteractor: QuizInteractable {}
+extension QuizInteractor: QuizInteractable {
+
+    func start() {
+        fetchHiragana()
+    }
+
+    func answerSelected() {
+        currentIndex += 1
+        presenter.prepareViewModel(currentIndex: currentIndex, languagePairs: languagePairs)
+    }
+
+    private func fetchHiragana() {
+        worker.fetchHiragana { [weak self] languagePairs in
+            guard let self = self else { return }
+            self.languagePairs = languagePairs
+            self.presenter.prepareViewModel(currentIndex: self.currentIndex, languagePairs: self.languagePairs)
+        }
+    }
+}

@@ -70,10 +70,16 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsU-IE-TUT">
                                     <rect key="frame" x="0.0" y="0.0" width="179" height="64"/>
                                     <state key="normal" title="quiz button"/>
+                                    <connections>
+                                        <action selector="buttonTapped" destination="-1" eventType="touchUpInside" id="1Ua-c0-nol"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZ8-HB-XTR">
                                     <rect key="frame" x="187" y="0.0" width="179" height="64"/>
                                     <state key="normal" title="quiz button"/>
+                                    <connections>
+                                        <action selector="buttonTapped" destination="-1" eventType="touchUpInside" id="QXP-kz-ZjL"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
@@ -86,10 +92,16 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsB-EX-owI">
                                     <rect key="frame" x="0.0" y="0.0" width="179" height="64"/>
                                     <state key="normal" title="quiz button"/>
+                                    <connections>
+                                        <action selector="buttonTapped" destination="-1" eventType="touchUpInside" id="0Oz-QF-Dqp"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDh-jg-las">
                                     <rect key="frame" x="187" y="0.0" width="179" height="64"/>
                                     <state key="normal" title="quiz button"/>
+                                    <connections>
+                                        <action selector="buttonTapped" destination="-1" eventType="touchUpInside" id="8QC-Da-Lnw"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
