@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0363458825F18C7000F79DE3 /* QuizFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363458025F18C7000F79DE3 /* QuizFactory.swift */; };
+		0363458925F18C7000F79DE3 /* QuizPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363458125F18C7000F79DE3 /* QuizPresenter.swift */; };
+		0363458A25F18C7000F79DE3 /* QuizWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363458225F18C7000F79DE3 /* QuizWorker.swift */; };
+		0363458B25F18C7000F79DE3 /* QuizRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363458325F18C7000F79DE3 /* QuizRouter.swift */; };
+		0363458C25F18C7000F79DE3 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363458425F18C7000F79DE3 /* QuizViewController.swift */; };
+		0363458D25F18C7000F79DE3 /* QuizInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363458525F18C7000F79DE3 /* QuizInteractor.swift */; };
+		0363458E25F18C7000F79DE3 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363458625F18C7000F79DE3 /* QuizViewModel.swift */; };
+		0363458F25F18C7000F79DE3 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0363458725F18C7000F79DE3 /* QuizViewController.xib */; };
 		0366BA6925EEEA7800C03A80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0366BA6825EEEA7800C03A80 /* AppDelegate.swift */; };
 		0366BA6B25EEEA7800C03A80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0366BA6A25EEEA7800C03A80 /* SceneDelegate.swift */; };
 		0366BA7025EEEA7800C03A80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0366BA6E25EEEA7800C03A80 /* Main.storyboard */; };
@@ -36,6 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0363458025F18C7000F79DE3 /* QuizFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizFactory.swift; sourceTree = "<group>"; };
+		0363458125F18C7000F79DE3 /* QuizPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPresenter.swift; sourceTree = "<group>"; };
+		0363458225F18C7000F79DE3 /* QuizWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizWorker.swift; sourceTree = "<group>"; };
+		0363458325F18C7000F79DE3 /* QuizRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRouter.swift; sourceTree = "<group>"; };
+		0363458425F18C7000F79DE3 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		0363458525F18C7000F79DE3 /* QuizInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizInteractor.swift; sourceTree = "<group>"; };
+		0363458625F18C7000F79DE3 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		0363458725F18C7000F79DE3 /* QuizViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizViewController.xib; sourceTree = "<group>"; };
 		0366BA6525EEEA7800C03A80 /* LanguageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanguageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0366BA6825EEEA7800C03A80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0366BA6A25EEEA7800C03A80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +94,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0363457F25F18C3000F79DE3 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				0363458025F18C7000F79DE3 /* QuizFactory.swift */,
+				0363458625F18C7000F79DE3 /* QuizViewModel.swift */,
+				0363458425F18C7000F79DE3 /* QuizViewController.swift */,
+				0363458525F18C7000F79DE3 /* QuizInteractor.swift */,
+				0363458125F18C7000F79DE3 /* QuizPresenter.swift */,
+				0363458225F18C7000F79DE3 /* QuizWorker.swift */,
+				0363458325F18C7000F79DE3 /* QuizRouter.swift */,
+				0363458725F18C7000F79DE3 /* QuizViewController.xib */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
 		0366BA5C25EEEA7800C03A80 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +135,7 @@
 				0366BA6825EEEA7800C03A80 /* AppDelegate.swift */,
 				0366BA6A25EEEA7800C03A80 /* SceneDelegate.swift */,
 				0366BAA425EEEF0300C03A80 /* Home */,
+				0363457F25F18C3000F79DE3 /* Quiz */,
 				0366BA6E25EEEA7800C03A80 /* Main.storyboard */,
 				0366BA7125EEEA7A00C03A80 /* Assets.xcassets */,
 				0366BA7325EEEA7A00C03A80 /* LaunchScreen.storyboard */,
@@ -245,6 +277,7 @@
 				0366BA7525EEEA7A00C03A80 /* LaunchScreen.storyboard in Resources */,
 				0366BA7225EEEA7A00C03A80 /* Assets.xcassets in Resources */,
 				0366BA7025EEEA7800C03A80 /* Main.storyboard in Resources */,
+				0363458F25F18C7000F79DE3 /* QuizViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,10 +302,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0363458A25F18C7000F79DE3 /* QuizWorker.swift in Sources */,
 				0366BA6925EEEA7800C03A80 /* AppDelegate.swift in Sources */,
 				0366BAB025EEF02900C03A80 /* HomeRouter.swift in Sources */,
+				0363458825F18C7000F79DE3 /* QuizFactory.swift in Sources */,
 				0366BA6B25EEEA7800C03A80 /* SceneDelegate.swift in Sources */,
+				0363458B25F18C7000F79DE3 /* QuizRouter.swift in Sources */,
+				0363458E25F18C7000F79DE3 /* QuizViewModel.swift in Sources */,
+				0363458C25F18C7000F79DE3 /* QuizViewController.swift in Sources */,
+				0363458D25F18C7000F79DE3 /* QuizInteractor.swift in Sources */,
 				0366BAB125EEF02900C03A80 /* HomeViewController.swift in Sources */,
+				0363458925F18C7000F79DE3 /* QuizPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

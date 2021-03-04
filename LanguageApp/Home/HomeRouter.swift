@@ -29,13 +29,12 @@ final class HomeRouter {
 extension HomeRouter: HomeRoutable {
 
     func routeToQuiz(_ type: QuizType) {
+        let quizViewController = QuizFactory.makeScene()
         switch type {
         case .hiragana:
-            print("")
-            // TODO - present Quiz Scene
+            vc?.present(quizViewController, animated: true)
         case .katakana:
-            print("")
-            // TODO - present Quiz Scene
+            vc?.present(quizViewController, animated: true)
         }
     }
 }
