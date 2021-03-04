@@ -8,7 +8,14 @@
 
 import UIKit
 
-protocol HomeRoutable {}
+enum QuizType: String {
+    case hiragana
+    case katakana
+}
+
+protocol HomeRoutable {
+    func routeToQuiz(_ type: QuizType)
+}
 
 final class HomeRouter {
 
@@ -19,4 +26,16 @@ final class HomeRouter {
     }
 }
 
-extension HomeRouter: HomeRoutable {}
+extension HomeRouter: HomeRoutable {
+
+    func routeToQuiz(_ type: QuizType) {
+        switch type {
+        case .hiragana:
+            print("")
+            // TODO - present Quiz Scene
+        case .katakana:
+            print("")
+            // TODO - present Quiz Scene
+        }
+    }
+}

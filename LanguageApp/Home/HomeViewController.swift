@@ -20,18 +20,23 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        let router = HomeRouter()
+        router.bind(to: self)
+        bind(to: router)
+    }
+
     func bind(to router: HomeRoutable) {
         self.router = router
     }
 
-    func hiraganaButtonTapped() {
-
-
+    @IBAction func hiraganaButtonTapped(_ sender: Any) {
+        router?.routeToQuiz(.hiragana)
     }
 
-    func katakanaButtonTapped() {
-
-
+    @IBAction func katakanaButtonTapped(_ sender: Any) {
+        router?.routeToQuiz(.katakana)
     }
 }
 
