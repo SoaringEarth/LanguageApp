@@ -8,9 +8,7 @@
 
 import UIKit
 
-protocol HomeViewable: class {
-    // Replaced by presenter's presentation output functions
-}
+protocol HomeViewable: class {}
 
 final class HomeViewController: UIViewController {
 
