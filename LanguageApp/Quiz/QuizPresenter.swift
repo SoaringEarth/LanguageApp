@@ -10,6 +10,7 @@ import UIKit
 
 protocol QuizPresentable: class {
     func prepareViewModel(currentIndex: Int, languagePairs: [LanguagePairable])
+    func quizCompleted()
 }
 
 final class QuizPresenter {
@@ -29,5 +30,9 @@ extension QuizPresenter: QuizPresentable {
                                   correctAnswer: languagePairs[currentIndex - 1].english,
                                   incorrectAnswers: [languagePairs[1].english, languagePairs[2].english, languagePairs[3].english])
         view?.updateView(viewModel)
+    }
+
+    func quizCompleted() {
+        view?.routeToQuizLeaderboard()
     }
 }

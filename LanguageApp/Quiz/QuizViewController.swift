@@ -10,6 +10,7 @@ import UIKit
 
 protocol QuizViewable: class {
     func updateView(_ viewModel: QuizViewModel)
+    func routeToQuizLeaderboard()
 }
 
 final class QuizViewController: UIViewController {
@@ -49,5 +50,9 @@ extension QuizViewController: QuizViewable {
         topRightButton.setTitle(viewModel.incorrectAnswers[0], for: .normal)
         bottomLeftButton.setTitle(viewModel.incorrectAnswers[1], for: .normal)
         bottomRightButton.setTitle(viewModel.incorrectAnswers[2], for: .normal)
+    }
+
+    func routeToQuizLeaderboard() {
+        router?.presentQuizLeaderboard()
     }
 }

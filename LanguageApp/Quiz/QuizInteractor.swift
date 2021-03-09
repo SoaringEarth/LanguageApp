@@ -34,7 +34,7 @@ extension QuizInteractor: QuizInteractable {
 
     func answerSelected() {
         currentIndex += 1
-        presenter.prepareViewModel(currentIndex: currentIndex, languagePairs: languagePairs)
+        currentIndex > languagePairs.count ? presenter.quizCompleted() : presenter.prepareViewModel(currentIndex: currentIndex, languagePairs: languagePairs)
     }
 
     private func fetchHiragana() {

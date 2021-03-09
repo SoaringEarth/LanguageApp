@@ -8,7 +8,9 @@
 
 import UIKit
 
-protocol QuizRoutable {}
+protocol QuizRoutable {
+    func presentQuizLeaderboard()
+}
 
 final class QuizRouter {
 
@@ -19,4 +21,9 @@ final class QuizRouter {
     }
 }
 
-extension QuizRouter: QuizRoutable {}
+extension QuizRouter: QuizRoutable {
+
+    func presentQuizLeaderboard() {
+        // TODO : Implement quiz leaderboard
+    }
+}
