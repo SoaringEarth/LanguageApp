@@ -9,17 +9,21 @@
 import Foundation
 
 protocol QuizWorkable {
-    func fetchHiragana(completion: @escaping ([LanguagePairable]) -> Void)
+    func fetchData(completion: @escaping ([LanguagePairable]) -> Void)
 }
 
 final class QuizWorker {
+
+    let dataSetFetcher: KanaDataSet
     
-    init() {}
+    init(dataSetFetcher: KanaDataSet) {
+        self.dataSetFetcher = dataSetFetcher
+    }
 }
 
 extension QuizWorker: QuizWorkable {
 
-    func fetchHiragana(completion: @escaping ([LanguagePairable]) -> Void) {
-        completion(HiraganaDataSet.hiraganaArray.shuffled())
+    func fetchData(completion: @escaping ([LanguagePairable]) -> Void) {
+        completion(dataSetFetcher.baseArray.shuffled())
     }
 }

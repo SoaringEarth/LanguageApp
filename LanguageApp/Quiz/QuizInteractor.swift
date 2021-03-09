@@ -38,7 +38,7 @@ extension QuizInteractor: QuizInteractable {
     }
 
     private func fetchHiragana() {
-        worker.fetchHiragana { [weak self] languagePairs in
+        worker.fetchData { [weak self] languagePairs in
             guard let self = self else { return }
             self.languagePairs = languagePairs
             self.presenter.prepareViewModel(currentIndex: self.currentIndex, languagePairs: self.languagePairs)

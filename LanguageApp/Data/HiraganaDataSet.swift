@@ -28,8 +28,12 @@ struct Katakana: LanguagePairable {
     var english: String
 }
 
-struct HiraganaDataSet {
-    static let hiraganaArray: [Hiragana] = [
+protocol KanaDataSet {
+    var baseArray: [LanguagePairable] { get }
+}
+
+struct HiraganaDataSet: KanaDataSet {
+    let baseArray: [LanguagePairable] = [
         Hiragana(character: "あ", english: "a"),
         Hiragana(character: "い", english: "i"),
         Hiragana(character: "う", english: "u"),
@@ -79,8 +83,8 @@ struct HiraganaDataSet {
     ]
 }
 
-struct KatakanaDataSet {
-    static let katakanaArray: [Katakana] = [
+struct KatakanaDataSet: KanaDataSet {
+    let baseArray: [LanguagePairable] = [
         Katakana(character: "あ", english: "a"),
         Katakana(character: "い", english: "i"),
         Katakana(character: "う", english: "u"),

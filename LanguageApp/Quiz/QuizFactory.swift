@@ -10,10 +10,10 @@ import Foundation
 
 enum QuizFactory {
 
-    static func makeScene() -> QuizViewController {
+    static func makeScene(dataSetFetcher: KanaDataSet) -> QuizViewController {
         let vc = QuizViewController(nibName: String(describing: QuizViewController.self), bundle: .main)
         let presenter = QuizPresenter(view: vc)
-        let worker = QuizWorker()
+        let worker = QuizWorker(dataSetFetcher: dataSetFetcher)
         let interactor = QuizInteractor(presenter: presenter, worker: worker)
         let router = QuizRouter()
         router.bind(to: vc)
