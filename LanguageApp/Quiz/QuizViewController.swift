@@ -46,10 +46,17 @@ extension QuizViewController: QuizViewable {
     func updateView(_ viewModel: QuizViewModel) {
         progressLabel.text = viewModel.progress
         targetLabel.text = viewModel.target
-        topLeftButton.setTitle(viewModel.correctAnswer, for: .normal)
-        topRightButton.setTitle(viewModel.incorrectAnswers[0], for: .normal)
-        bottomLeftButton.setTitle(viewModel.incorrectAnswers[1], for: .normal)
-        bottomRightButton.setTitle(viewModel.incorrectAnswers[2], for: .normal)
+        setupQuizButtons(viewModel)
+    }
+
+    func setupQuizButtons(_ viewModel: QuizViewModel) {
+        var buttonArray: [UIButton] = [topLeftButton, topRightButton, bottomLeftButton, bottomRightButton]
+        let randomNumber = Int(arc4random()) % 4
+        buttonArray[randomNumber].setTitle(viewModel.correctAnswer, for: .normal)
+        buttonArray.remove(at: randomNumber)
+        for (index, button) in buttonArray.enumerated() {
+            button.setTitle(viewModel.incorrectAnswers[index], for: .normal)
+        }
     }
 
     func routeToQuizLeaderboard() {

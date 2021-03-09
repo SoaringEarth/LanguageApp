@@ -21,6 +21,19 @@ final class QuizPresenter {
     init(view: QuizViewable?) {
         self.view = view
     }
+
+    private func createIncorrectAnswerArray(numberOfIncorrectAnswers: Int, correctAnswer: String, languagePairs: [LanguagePairable]) -> [String] {
+        var incorrectArray: [String] = []
+        let zeroIndexedCount = languagePairs.count - 1
+        while incorrectArray.count < numberOfIncorrectAnswers {
+            let incorrectIndex = Int(arc4random()) % zeroIndexedCount
+            let incorrectAnswer = languagePairs[incorrectIndex].english
+            if !incorrectArray.contains(incorrectAnswer) && incorrectAnswer != correctAnswer {
+                incorrectArray.append(incorrectAnswer)
+            }
+        }
+        return incorrectArray
+    }
 }
 
 extension QuizPresenter: QuizPresentable {
@@ -28,7 +41,9 @@ extension QuizPresenter: QuizPresentable {
         viewModel = QuizViewModel(progress: "\(currentIndex) / \(languagePairs.count)",
                                   target: languagePairs[currentIndex - 1].character,
                                   correctAnswer: languagePairs[currentIndex - 1].english,
-                                  incorrectAnswers: [languagePairs[1].english, languagePairs[2].english, languagePairs[3].english])
+                                  incorrectAnswers: createIncorrectAnswerArray(numberOfIncorrectAnswers: 3,
+                                                                               correctAnswer: languagePairs[currentIndex - 1].english,
+                                                                               languagePairs: languagePairs))
         view?.updateView(viewModel)
     }
 

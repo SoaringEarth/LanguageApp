@@ -14,13 +14,12 @@ protocol QuizWorkable {
 
 final class QuizWorker {
     
-
     init() {}
 }
 
 extension QuizWorker: QuizWorkable {
 
     func fetchHiragana(completion: @escaping ([LanguagePairable]) -> Void) {
-        completion(HiraganaDataSet.hiraganaArray)
+        completion(HiraganaDataSet.hiraganaArray.shuffled())
     }
 }
