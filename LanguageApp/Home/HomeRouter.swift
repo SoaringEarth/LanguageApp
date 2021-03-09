@@ -31,11 +31,11 @@ extension HomeRouter: HomeRoutable {
     func routeToQuiz(_ type: QuizType) {
         switch type {
         case .hiragana:
-            print("")
-            // TODO - present Quiz Scene
+            let quizViewController = QuizFactory.makeScene(dataSetFetcher: HiraganaDataSet())
+            vc?.present(quizViewController, animated: true)
         case .katakana:
-            print("")
-            // TODO - present Quiz Scene
+            let quizViewController = QuizFactory.makeScene(dataSetFetcher: KatakanaDataSet())
+            vc?.present(quizViewController, animated: true)
         }
     }
 }
