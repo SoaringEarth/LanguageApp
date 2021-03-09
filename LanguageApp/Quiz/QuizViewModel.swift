@@ -8,5 +8,16 @@
 
 import Foundation
 
-struct QuizViewModel {}
+struct QuizViewModel {
+    let progress: String
+    let target: String
+    let correctAnswer: String
+    let incorrectAnswers: [String]
+}
+
+extension QuizViewModel {
+    static var empty: QuizViewModel {
+        return QuizViewModel(progress: "", target: "", correctAnswer: "", incorrectAnswers: [])
+    }
+}
 

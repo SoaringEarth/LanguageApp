@@ -8,11 +8,19 @@
 
 import Foundation
 
-protocol QuizWorkable {}
+protocol QuizWorkable {
+    func fetchHiragana(completion: @escaping ([LanguagePairable]) -> Void)
+}
 
 final class QuizWorker {
+    
 
     init() {}
 }
 
-extension QuizWorker: QuizWorkable {}
+extension QuizWorker: QuizWorkable {
+
+    func fetchHiragana(completion: @escaping ([LanguagePairable]) -> Void) {
+        completion(HiraganaDataSet.hiraganaArray)
+    }
+}
