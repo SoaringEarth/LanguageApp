@@ -10,7 +10,7 @@ import UIKit
 
 protocol QuizViewable: class {
     func updateView(_ viewModel: QuizViewModel)
-    func routeToQuizLeaderboard()
+    func routeToQuizLeaderboard(withScore score: Int, questionCount: Int)
 }
 
 final class QuizViewController: UIViewController {
@@ -20,10 +20,10 @@ final class QuizViewController: UIViewController {
 
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var targetLabel: UILabel!
-    @IBOutlet weak var topLeftButton: UIButton!
-    @IBOutlet weak var topRightButton: UIButton!
-    @IBOutlet weak var bottomLeftButton: UIButton!
-    @IBOutlet weak var bottomRightButton: UIButton!
+    @IBOutlet weak var topLeftButton: QuizButton!
+    @IBOutlet weak var topRightButton: QuizButton!
+    @IBOutlet weak var bottomLeftButton: QuizButton!
+    @IBOutlet weak var bottomRightButton: QuizButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +36,9 @@ final class QuizViewController: UIViewController {
         self.router = router
     }
 
-    @IBAction func buttonTapped() {
-        interactor?.answerSelected()
+    @IBAction func buttonTapped(_ sender: Any) {
+        guard let quizButton = sender as? QuizButton else { return }
+        interactor?.answerSelected(isCorrect: quizButton.isCorrectAnswer)
     }
 }
 
@@ -47,19 +48,21 @@ extension QuizViewController: QuizViewable {
         progressLabel.text = viewModel.progress
         targetLabel.text = viewModel.target
         setupQuizButtons(viewModel)
-    }
+    }   
 
     func setupQuizButtons(_ viewModel: QuizViewModel) {
-        var buttonArray: [UIButton] = [topLeftButton, topRightButton, bottomLeftButton, bottomRightButton]
+        var buttonArray: [QuizButton] = [topLeftButton, topRightButton, bottomLeftButton, bottomRightButton]
         let randomNumber = Int(arc4random()) % 4
         buttonArray[randomNumber].setTitle(viewModel.correctAnswer, for: .normal)
+        buttonArray[randomNumber].isCorrectAnswer = true
         buttonArray.remove(at: randomNumber)
         for (index, button) in buttonArray.enumerated() {
             button.setTitle(viewModel.incorrectAnswers[index], for: .normal)
+            button.isCorrectAnswer = false
         }
     }
 
-    func routeToQuizLeaderboard() {
-        router?.presentQuizLeaderboard()
+    func routeToQuizLeaderboard(withScore score: Int, questionCount: Int) {
+        router?.presentQuizLeaderboard(withScore: score, questionCount: questionCount)
     }
 }

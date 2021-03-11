@@ -9,7 +9,7 @@
 import UIKit
 
 protocol QuizRoutable {
-    func presentQuizLeaderboard()
+    func presentQuizLeaderboard(withScore score: Int, questionCount: Int)
 }
 
 final class QuizRouter {
@@ -23,7 +23,8 @@ final class QuizRouter {
 
 extension QuizRouter: QuizRoutable {
 
-    func presentQuizLeaderboard() {
-        // TODO : Implement quiz leaderboard
+    func presentQuizLeaderboard(withScore score: Int, questionCount: Int) {
+        let quizLeaderboard = QuizLeaderboardFactory.makeScene(withScore: score, questionCount: questionCount)
+        vc?.present(quizLeaderboard, animated: true)
     }
 }
