@@ -10,7 +10,7 @@ import Foundation
 
 protocol QuizInteractable {
     func start()
-    func answerSelected()
+    func answerSelected(isCorrect: Bool)
 }
 
 final class QuizInteractor {
@@ -19,6 +19,7 @@ final class QuizInteractor {
     private let worker: QuizWorkable
     private var currentIndex: Int = 1
     private var languagePairs: [LanguagePairable] = []
+    private var correctAnswers: Int = 0
 
     init(presenter: QuizPresentable, worker: QuizWorkable) {
         self.presenter = presenter
@@ -32,9 +33,10 @@ extension QuizInteractor: QuizInteractable {
         fetchHiragana()
     }
 
-    func answerSelected() {
+    func answerSelected(isCorrect: Bool) {
+        correctAnswers += isCorrect ? 1 : 0
         currentIndex += 1
-        currentIndex > languagePairs.count ? presenter.quizCompleted() : presenter.prepareViewModel(currentIndex: currentIndex, languagePairs: languagePairs)
+        currentIndex > languagePairs.count ? presenter.quizCompleted(withScore: correctAnswers, questionCount: languagePairs.count) : presenter.prepareViewModel(currentIndex: currentIndex, languagePairs: languagePairs)
     }
 
     private func fetchHiragana() {

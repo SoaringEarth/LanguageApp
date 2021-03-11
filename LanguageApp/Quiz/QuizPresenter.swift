@@ -10,7 +10,7 @@ import UIKit
 
 protocol QuizPresentable: class {
     func prepareViewModel(currentIndex: Int, languagePairs: [LanguagePairable])
-    func quizCompleted()
+    func quizCompleted(withScore: Int, questionCount: Int)
 }
 
 final class QuizPresenter {
@@ -47,7 +47,9 @@ extension QuizPresenter: QuizPresentable {
         view?.updateView(viewModel)
     }
 
-    func quizCompleted() {
-        view?.routeToQuizLeaderboard()
+    func quizCompleted(withScore score: Int, questionCount: Int) {
+        print("Score: \(score)")
+        print("Total: \(questionCount)")
+        view?.routeToQuizLeaderboard(withScore: score, questionCount: questionCount)
     }
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -67,18 +67,18 @@
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3wu-jR-sc8">
                             <rect key="frame" x="0.0" y="0.0" width="366" height="64"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsU-IE-TUT">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsU-IE-TUT" customClass="QuizButton" customModule="LanguageApp" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="179" height="64"/>
                                     <state key="normal" title="quiz button"/>
                                     <connections>
-                                        <action selector="buttonTapped" destination="-1" eventType="touchUpInside" id="1Ua-c0-nol"/>
+                                        <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="mx7-86-9Te"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZ8-HB-XTR">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZ8-HB-XTR" customClass="QuizButton" customModule="LanguageApp" customModuleProvider="target">
                                     <rect key="frame" x="187" y="0.0" width="179" height="64"/>
                                     <state key="normal" title="quiz button"/>
                                     <connections>
-                                        <action selector="buttonTapped" destination="-1" eventType="touchUpInside" id="QXP-kz-ZjL"/>
+                                        <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="Tfh-cQ-oN4"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -89,18 +89,18 @@
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="z91-67-PH2">
                             <rect key="frame" x="0.0" y="72" width="366" height="64"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsB-EX-owI">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsB-EX-owI" customClass="QuizButton" customModule="LanguageApp" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="179" height="64"/>
                                     <state key="normal" title="quiz button"/>
                                     <connections>
-                                        <action selector="buttonTapped" destination="-1" eventType="touchUpInside" id="0Oz-QF-Dqp"/>
+                                        <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="oEI-Od-gLe"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDh-jg-las">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDh-jg-las" customClass="QuizButton" customModule="LanguageApp" customModuleProvider="target">
                                     <rect key="frame" x="187" y="0.0" width="179" height="64"/>
                                     <state key="normal" title="quiz button"/>
                                     <connections>
-                                        <action selector="buttonTapped" destination="-1" eventType="touchUpInside" id="8QC-Da-Lnw"/>
+                                        <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="OII-jK-3PQ"/>
                                     </connections>
                                 </button>
                             </subviews>
