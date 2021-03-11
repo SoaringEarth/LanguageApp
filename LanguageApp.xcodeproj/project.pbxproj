@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0326A1FB25FABF0600189565 /* QuizButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0326A1FA25FABF0600189565 /* QuizButton.swift */; };
+		0326A20925FACE6800189565 /* QuizLeaderboardCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0326A20825FACE6800189565 /* QuizLeaderboardCellViewModel.swift */; };
 		0363458825F18C7000F79DE3 /* QuizFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363458025F18C7000F79DE3 /* QuizFactory.swift */; };
 		0363458925F18C7000F79DE3 /* QuizPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363458125F18C7000F79DE3 /* QuizPresenter.swift */; };
 		0363458A25F18C7000F79DE3 /* QuizWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0363458225F18C7000F79DE3 /* QuizWorker.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		0326A1FA25FABF0600189565 /* QuizButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizButton.swift; sourceTree = "<group>"; };
+		0326A20825FACE6800189565 /* QuizLeaderboardCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizLeaderboardCellViewModel.swift; sourceTree = "<group>"; };
 		0363458025F18C7000F79DE3 /* QuizFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizFactory.swift; sourceTree = "<group>"; };
 		0363458125F18C7000F79DE3 /* QuizPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPresenter.swift; sourceTree = "<group>"; };
 		0363458225F18C7000F79DE3 /* QuizWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizWorker.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				03F089EE25F830080067BFE8 /* QuizLeaderboardWorker.swift */,
 				03F089EF25F830080067BFE8 /* QuizLeaderboardRouter.swift */,
 				03F089F325F830080067BFE8 /* QuizLeaderboardViewController.xib */,
+				0326A20825FACE6800189565 /* QuizLeaderboardCellViewModel.swift */,
 			);
 			path = Leaderboard;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0326A20925FACE6800189565 /* QuizLeaderboardCellViewModel.swift in Sources */,
 				03F089F525F830080067BFE8 /* QuizLeaderboardPresenter.swift in Sources */,
 				0363458A25F18C7000F79DE3 /* QuizWorker.swift in Sources */,
 				03F089F725F830080067BFE8 /* QuizLeaderboardRouter.swift in Sources */,
