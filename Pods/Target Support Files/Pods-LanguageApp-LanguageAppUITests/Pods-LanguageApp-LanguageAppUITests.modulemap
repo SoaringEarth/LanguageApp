@@ -1,0 +1,6 @@
+framework module Pods_LanguageApp_LanguageAppUITests {
+  umbrella header "Pods-LanguageApp-LanguageAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
