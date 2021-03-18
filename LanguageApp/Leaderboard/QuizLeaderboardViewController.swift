@@ -39,17 +39,22 @@ extension QuizLeaderboardViewController: UITableViewDataSource, UITableViewDeleg
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return viewModel.cellViewModels.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+        cell.textLabel?.text = viewModel.cellViewModels[indexPath.row].title
+        cell.detailTextLabel?.text = viewModel.cellViewModels[indexPath.row].result
+        return cell
     }
 }
 
 extension QuizLeaderboardViewController: QuizLeaderboardViewable {
 
     func updateView(_ viewModel: QuizLeaderboardViewModel) {
+        self.viewModel = viewModel
         userScoreLabel.text = viewModel.userScore
+        tableView.reloadData()
     }
 }

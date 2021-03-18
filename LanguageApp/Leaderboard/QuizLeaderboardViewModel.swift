@@ -11,6 +11,7 @@ import Foundation
 struct QuizLeaderboardViewModel {
 
     var userScore: String
+    var cellViewModels: [QuizLeaderboardCellViewModel] = []
 }
 
 extension QuizLeaderboardViewModel {
