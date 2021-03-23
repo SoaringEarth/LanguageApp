@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,6 +26,7 @@
 		0366BA8B25EEEA7A00C03A80 /* LanguageAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0366BA8A25EEEA7A00C03A80 /* LanguageAppUITests.swift */; };
 		0366BAB025EEF02900C03A80 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0366BAA825EEF02900C03A80 /* HomeRouter.swift */; };
 		0366BAB125EEF02900C03A80 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0366BAA925EEF02900C03A80 /* HomeViewController.swift */; };
+		03BE606526040162007D3472 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03BE606426040162007D3472 /* GoogleService-Info.plist */; };
 		03F089F425F830080067BFE8 /* QuizLeaderboardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F089EC25F830080067BFE8 /* QuizLeaderboardFactory.swift */; };
 		03F089F525F830080067BFE8 /* QuizLeaderboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F089ED25F830080067BFE8 /* QuizLeaderboardPresenter.swift */; };
 		03F089F625F830080067BFE8 /* QuizLeaderboardWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F089EE25F830080067BFE8 /* QuizLeaderboardWorker.swift */; };
@@ -83,6 +84,7 @@
 		0366BA8C25EEEA7A00C03A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0366BAA825EEF02900C03A80 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		0366BAA925EEF02900C03A80 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		03BE606426040162007D3472 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		03F089EC25F830080067BFE8 /* QuizLeaderboardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizLeaderboardFactory.swift; sourceTree = "<group>"; };
 		03F089ED25F830080067BFE8 /* QuizLeaderboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizLeaderboardPresenter.swift; sourceTree = "<group>"; };
 		03F089EE25F830080067BFE8 /* QuizLeaderboardWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizLeaderboardWorker.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				0366BA7125EEEA7A00C03A80 /* Assets.xcassets */,
 				0366BA7325EEEA7A00C03A80 /* LaunchScreen.storyboard */,
 				0366BA7625EEEA7A00C03A80 /* Info.plist */,
+				03BE606426040162007D3472 /* GoogleService-Info.plist */,
 			);
 			path = LanguageApp;
 			sourceTree = "<group>";
@@ -247,7 +250,6 @@
 				CECAF7747587B4A6D8E35EB6 /* Pods-LanguageAppTests.debug.xcconfig */,
 				40BB8842D1FBCBDF3905050B /* Pods-LanguageAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -272,6 +274,7 @@
 				0366BA6125EEEA7800C03A80 /* Sources */,
 				0366BA6225EEEA7800C03A80 /* Frameworks */,
 				0366BA6325EEEA7800C03A80 /* Resources */,
+				D8067F30998CE060AA3C435B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,6 +312,7 @@
 				0366BA8225EEEA7A00C03A80 /* Sources */,
 				0366BA8325EEEA7A00C03A80 /* Frameworks */,
 				0366BA8425EEEA7A00C03A80 /* Resources */,
+				C76D92E71D48546FD302437E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -372,6 +376,7 @@
 				0366BA7025EEEA7800C03A80 /* Main.storyboard in Resources */,
 				0363458F25F18C7000F79DE3 /* QuizViewController.xib in Resources */,
 				03F089FB25F830080067BFE8 /* QuizLeaderboardViewController.xib in Resources */,
+				03BE606526040162007D3472 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +461,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C76D92E71D48546FD302437E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LanguageApp-LanguageAppUITests/Pods-LanguageApp-LanguageAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LanguageApp-LanguageAppUITests/Pods-LanguageApp-LanguageAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LanguageApp-LanguageAppUITests/Pods-LanguageApp-LanguageAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8067F30998CE060AA3C435B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LanguageApp/Pods-LanguageApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LanguageApp/Pods-LanguageApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LanguageApp/Pods-LanguageApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
