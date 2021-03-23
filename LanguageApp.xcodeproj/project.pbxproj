@@ -35,6 +35,8 @@
 		03F089F925F830080067BFE8 /* QuizLeaderboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F089F125F830080067BFE8 /* QuizLeaderboardInteractor.swift */; };
 		03F089FA25F830080067BFE8 /* QuizLeaderboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F089F225F830080067BFE8 /* QuizLeaderboardViewModel.swift */; };
 		03F089FB25F830080067BFE8 /* QuizLeaderboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03F089F325F830080067BFE8 /* QuizLeaderboardViewController.xib */; };
+		03F5DD22260A694D007A8907 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5DD21260A694D007A8907 /* LoginViewController.swift */; };
+		03F5DD2A260A695E007A8907 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5DD29260A695E007A8907 /* RegisterViewController.swift */; };
 		03F9387725F1938100203F95 /* HiraganaDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F9387625F1938100203F95 /* HiraganaDataSet.swift */; };
 		45C67826AB4C83972C6440AD /* Pods_LanguageApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC224485BEE02ACF1BDBD2CD /* Pods_LanguageApp.framework */; };
 		608A8773FE2D4EB58DDD3CAB /* Pods_LanguageApp_LanguageAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A0F593B57FB7AD5ADD2201 /* Pods_LanguageApp_LanguageAppUITests.framework */; };
@@ -93,6 +95,8 @@
 		03F089F125F830080067BFE8 /* QuizLeaderboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizLeaderboardInteractor.swift; sourceTree = "<group>"; };
 		03F089F225F830080067BFE8 /* QuizLeaderboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizLeaderboardViewModel.swift; sourceTree = "<group>"; };
 		03F089F325F830080067BFE8 /* QuizLeaderboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizLeaderboardViewController.xib; sourceTree = "<group>"; };
+		03F5DD21260A694D007A8907 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		03F5DD29260A695E007A8907 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		03F9387625F1938100203F95 /* HiraganaDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaDataSet.swift; sourceTree = "<group>"; };
 		40BB8842D1FBCBDF3905050B /* Pods-LanguageAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LanguageAppTests.release.xcconfig"; path = "Target Support Files/Pods-LanguageAppTests/Pods-LanguageAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		7CBD463DCC7BE5EEBDE23354 /* Pods-LanguageApp-LanguageAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LanguageApp-LanguageAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-LanguageApp-LanguageAppUITests/Pods-LanguageApp-LanguageAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 				0366BA6825EEEA7800C03A80 /* AppDelegate.swift */,
 				0366BA6A25EEEA7800C03A80 /* SceneDelegate.swift */,
 				0366BAA425EEEF0300C03A80 /* Home */,
+				03F5DD1E260A68FD007A8907 /* Login */,
 				0363457F25F18C3000F79DE3 /* Quiz */,
 				03F089EB25F82E5E0067BFE8 /* Leaderboard */,
 				03F9387525F1935E00203F95 /* Data */,
@@ -230,6 +235,31 @@
 				0326A20825FACE6800189565 /* QuizLeaderboardCellViewModel.swift */,
 			);
 			path = Leaderboard;
+			sourceTree = "<group>";
+		};
+		03F5DD1E260A68FD007A8907 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				03F5DD1F260A6908007A8907 /* Login */,
+				03F5DD20260A690D007A8907 /* Register */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		03F5DD1F260A6908007A8907 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				03F5DD21260A694D007A8907 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		03F5DD20260A690D007A8907 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				03F5DD29260A695E007A8907 /* RegisterViewController.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		03F9387525F1935E00203F95 /* Data */ = {
@@ -514,9 +544,11 @@
 				0366BAB025EEF02900C03A80 /* HomeRouter.swift in Sources */,
 				0363458825F18C7000F79DE3 /* QuizFactory.swift in Sources */,
 				0366BA6B25EEEA7800C03A80 /* SceneDelegate.swift in Sources */,
+				03F5DD22260A694D007A8907 /* LoginViewController.swift in Sources */,
 				03F089F925F830080067BFE8 /* QuizLeaderboardInteractor.swift in Sources */,
 				0363458B25F18C7000F79DE3 /* QuizRouter.swift in Sources */,
 				0363458E25F18C7000F79DE3 /* QuizViewModel.swift in Sources */,
+				03F5DD2A260A695E007A8907 /* RegisterViewController.swift in Sources */,
 				0363458C25F18C7000F79DE3 /* QuizViewController.swift in Sources */,
 				03F089F825F830080067BFE8 /* QuizLeaderboardViewController.swift in Sources */,
 				0363458D25F18C7000F79DE3 /* QuizInteractor.swift in Sources */,
