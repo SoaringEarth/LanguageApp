@@ -21,6 +21,6 @@ class LoginViewController: UIViewController {
 
     @IBAction func logInButtonTapped(_ sender: Any) {
         guard emailTextField.text != "", passwordTextField.text != "" else { return }
-        // TODO: Login
+
     }
 }

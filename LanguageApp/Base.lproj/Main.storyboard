@@ -185,6 +185,9 @@
                                     <constraint firstAttribute="height" constant="44" id="c8I-aP-W97"/>
                                 </constraints>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="Tl7-EH-KAP" eventType="touchUpInside" id="vwe-Sz-RA5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dIB-uf-4GI"/>
@@ -205,6 +208,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Npe-be-lf0"/>
+                    <connections>
+                        <outlet property="confirmPasswordTextfield" destination="jND-Ep-SV6" id="150-4N-22M"/>
+                        <outlet property="emailTextField" destination="peb-Pl-GLs" id="ZLq-b7-QXM"/>
+                        <outlet property="passwordTextField" destination="Hr9-e8-Zge" id="KX6-cI-N89"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8s2-nW-3g0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

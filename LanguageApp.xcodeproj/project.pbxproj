@@ -37,6 +37,9 @@
 		03F089FB25F830080067BFE8 /* QuizLeaderboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03F089F325F830080067BFE8 /* QuizLeaderboardViewController.xib */; };
 		03F5DD22260A694D007A8907 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5DD21260A694D007A8907 /* LoginViewController.swift */; };
 		03F5DD2A260A695E007A8907 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5DD29260A695E007A8907 /* RegisterViewController.swift */; };
+		03F5DD48260A703F007A8907 /* FirebaseReferenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5DD47260A703F007A8907 /* FirebaseReferenceHelper.swift */; };
+		03F5DD4D260A719A007A8907 /* FirebaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5DD4C260A719A007A8907 /* FirebaseUser.swift */; };
+		03F5DD52260A7743007A8907 /* Encodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5DD51260A7743007A8907 /* Encodable+Dictionary.swift */; };
 		03F9387725F1938100203F95 /* HiraganaDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F9387625F1938100203F95 /* HiraganaDataSet.swift */; };
 		45C67826AB4C83972C6440AD /* Pods_LanguageApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC224485BEE02ACF1BDBD2CD /* Pods_LanguageApp.framework */; };
 		608A8773FE2D4EB58DDD3CAB /* Pods_LanguageApp_LanguageAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A0F593B57FB7AD5ADD2201 /* Pods_LanguageApp_LanguageAppUITests.framework */; };
@@ -97,6 +100,9 @@
 		03F089F325F830080067BFE8 /* QuizLeaderboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizLeaderboardViewController.xib; sourceTree = "<group>"; };
 		03F5DD21260A694D007A8907 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		03F5DD29260A695E007A8907 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		03F5DD47260A703F007A8907 /* FirebaseReferenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReferenceHelper.swift; sourceTree = "<group>"; };
+		03F5DD4C260A719A007A8907 /* FirebaseUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUser.swift; sourceTree = "<group>"; };
+		03F5DD51260A7743007A8907 /* Encodable+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Dictionary.swift"; sourceTree = "<group>"; };
 		03F9387625F1938100203F95 /* HiraganaDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaDataSet.swift; sourceTree = "<group>"; };
 		40BB8842D1FBCBDF3905050B /* Pods-LanguageAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LanguageAppTests.release.xcconfig"; path = "Target Support Files/Pods-LanguageAppTests/Pods-LanguageAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		7CBD463DCC7BE5EEBDE23354 /* Pods-LanguageApp-LanguageAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LanguageApp-LanguageAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-LanguageApp-LanguageAppUITests/Pods-LanguageApp-LanguageAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -266,6 +272,9 @@
 			isa = PBXGroup;
 			children = (
 				03F9387625F1938100203F95 /* HiraganaDataSet.swift */,
+				03F5DD47260A703F007A8907 /* FirebaseReferenceHelper.swift */,
+				03F5DD4C260A719A007A8907 /* FirebaseUser.swift */,
+				03F5DD51260A7743007A8907 /* Encodable+Dictionary.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -534,6 +543,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03F5DD48260A703F007A8907 /* FirebaseReferenceHelper.swift in Sources */,
 				0326A20925FACE6800189565 /* QuizLeaderboardCellViewModel.swift in Sources */,
 				03F089F525F830080067BFE8 /* QuizLeaderboardPresenter.swift in Sources */,
 				0363458A25F18C7000F79DE3 /* QuizWorker.swift in Sources */,
@@ -550,9 +560,11 @@
 				0363458E25F18C7000F79DE3 /* QuizViewModel.swift in Sources */,
 				03F5DD2A260A695E007A8907 /* RegisterViewController.swift in Sources */,
 				0363458C25F18C7000F79DE3 /* QuizViewController.swift in Sources */,
+				03F5DD52260A7743007A8907 /* Encodable+Dictionary.swift in Sources */,
 				03F089F825F830080067BFE8 /* QuizLeaderboardViewController.swift in Sources */,
 				0363458D25F18C7000F79DE3 /* QuizInteractor.swift in Sources */,
 				03F9387725F1938100203F95 /* HiraganaDataSet.swift in Sources */,
+				03F5DD4D260A719A007A8907 /* FirebaseUser.swift in Sources */,
 				0326A1FB25FABF0600189565 /* QuizButton.swift in Sources */,
 				03F089F425F830080067BFE8 /* QuizLeaderboardFactory.swift in Sources */,
 				0366BAB125EEF02900C03A80 /* HomeViewController.swift in Sources */,
